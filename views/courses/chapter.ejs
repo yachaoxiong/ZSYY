@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<% include ../shared/head.ejs %>
+<body>
+<head>
+    <% include ../shared/nav.ejs %>
+</head>
+<div>
+    <nav class="chapter-nav">
+        <div class="container">
+            <ul>
+                <li class="chapter-nav-item">
+                    <a href="#!" class="chapter-nav-item-ative"><i class="fas fa-file-video pr-2"></i>课程视屏</a>
+                </li>
+                <li>
+                    <a href="/courses/chapter/:_id/words"><i class="fas fa-file-word pr-2"></i>背诵单词</a>
+
+                </li>
+                <li>
+                    <a href="/courses/chapter/:_id/grad"><i class="fas fa-user-graduate pr-2"></i>成绩总结</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="container" style="min-width: 487px">
+        <div class="chapter-video-content">
+            <div class="row video-lc">
+                <div class="col-lg-8 ">
+
+                    <div class="video-card shadow-sm">
+                        <div class="video-content-title text-center" >
+                            <h3>Airport Travel</h3>
+                        </div>
+                        <div class="player-container-wrap">
+                            <div class="player-container shadow-lg">
+                                <div class="music-info">
+                                    <h5 id="player-title">小王子<span id="player-duration"></span></h5>
+
+                                    <div class="progress-container" id="progress-container">
+                                        <div class="player-progress" id="player-progress"></div>
+                                    </div>
+                                </div>
+
+                                <audio preload="metadata" id="audio"src="http://aod.cos.tx.xmcdn.com/group77/M0B/10/F0/wKgO315ZR6PQWPUEADag8UUJrkY618.mp3">
+                                </audio>
+                                <div class="image-container">
+                                    <img src="../../images/abtract.jpg">
+                                </div>
+                                <div class="player-navigation">
+                                    <button class="action-btn borderless" id="prev"><i class="fas fa-backward"></i></button>
+                                    <button class="action-btn borderless action-btn-big" id="play"><i class="fas fa-play"></i></button>
+                                    <button class="action-btn borderless" id="next"><i class="fas fa-forward"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="record-btn-wrap">
+                            <button class="btn record-btn"> 直播回放</button>
+                        </div>
+                        <div class="record-content">
+                            <div class="container record-container">
+                                <div class="row record-content-row">
+                                    <div class="col-md-2  col-sm-3 center-set bd-logo-wrap">
+                                        <p class="record-content-p bd-logo">百度云</p>
+                                    </div>
+                                    <div class="col-md-10 col-sm-9 bd-link-wrap ">
+                                        <p class="bd-link record-content-p">https://stackoverflow.com/questions/21201080/bootstrap-button-remove-outline-on-chrome-os-x</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card shadow-sm mt-5">
+                        <div class="video-content-title text-center" >
+                            <h3>课后练习</h3>
+                        </div>
+                        <div class="container pb-5">
+                            <div class="question-title ">
+                                <h5> if your are planning a longer trip,what can you do?</h5>
+                            </div>
+                            <div class="question-answer">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1">
+                                <p class="no-margin">Ask a friend to drop you off</p>
+                            </div>
+                            <div class="question-answer">
+                                <p class="no-margin">Ask a friend to drop you off</p>
+                            </div>
+                            <div class="question-answer">
+                                <p class="no-margin">Ask a friend to drop you off</p>
+                            </div>
+
+
+                            <div class="question-title ">
+                                <h5> if your are planning a longer trip,what can you do?</h5>
+                            </div>
+                            <div class="question-answer">
+                                <p class="no-margin">Ask a friend to drop you off</p>
+                            </div>
+                            <div class="question-answer">
+                                <p class="no-margin">Ask a friend to drop you off</p>
+                            </div>
+                            <div class="question-answer">
+                                <p class="no-margin">Ask a friend to drop you off</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+                <div class="col-lg-4 ">
+                 <div>
+                     <div class="side-card ">
+                         <div class="side-title-wrap">
+                             <div class="side-card-title ">小王子</div>
+                         </div>
+                         <div class="pt-2 side-card-link"><p>chapter 1</p></div>
+                         <div class="pt-2 side-card-link"><p>chapter 1</p></div>
+                         <div class="pt-2 side-card-link"><p>chapter 1</p></div>
+                     </div>
+                 </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+<div>
+
+
+
+
+
+<% include ../shared/footer.ejs %>
+</html>

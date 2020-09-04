@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<% include shared/head.ejs %>
+<body>
+<div class="banner">
+    <div class="banner-layer">
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#"><img class="logo" src="/images/logo-white.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav  ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link tp-btn" href="/login">登陆账号</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn zy-btn-primary" href="/register">注册账号</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+            <div class="content">
+                <div >
+                    <div class="home-title">Welcome to Sunny English</div>
+                    <h2 class="home-subtitle">欢迎来到 Sunny 英语学习地道英语</h2>
+                    <a class=" enroll-btn btn zy-btn-primary" href="/register">报名学习</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container course-section">
+    <h1 class="course-title">特色课程</h1>
+</section>
+
+<div class="container course-wrap">
+<div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-4 ">
+        <a href="/courses/1">
+    <div class="card mb-3 animate__animated">
+        <img class="course-cover" src="/images/home-bg.jpg">
+        <div class="card-body">
+            <h2 class="card-title">直播回放</h2>
+            <h6 class="card-subtitle text-muted">Suuny老师直播回放以及课后练习</h6>
+        </div>
+            <div class="course-footer">
+                <div class="pull-left">
+                    <img  class="instructor-icon" align="left" src="/images/logo.png">
+                    <h5 class="instructor-name ">Sunny</h5>
+                </div>
+                <div class="pull-right">
+                 <div class="course-price">会员免费</div>
+                </div>
+            </div>
+    </div>
+        </a>
+    </div>
+</div>
+</div>
+<!--<footer class="footer">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-sm-12 col-lg-4 ">-->
+<!--                © Copy 2020 芝士英语-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+<!--</footer>-->
+
+
+<!--</body>-->
+
+<% include shared/footer.ejs %>
+
+</html>

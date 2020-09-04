@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<% include shared/head.ejs %>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+    <a class="navbar-brand" href="/"><img class="logo-small" src="/images/logo.png"></a>
+    </div>
+</nav>
+<div class="container">
+    <div class="bg-white content-box shadow-lg">
+        <div class="form-title-wrap">
+            <h1 class="form-title">注册账号</h1>
+        </div>
+
+        <div class="row register-content">
+            <div class="col-lg-5 col-md-5 col-sm left-img">
+             <img class="register-img" src="/images/register.png">
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 text-left form-wrap">
+                <form method="post">
+                <div class="form-group">
+                    <label class="form-control-label" for="name">显示名</label>
+                    <input type="text" placeholder="显示名" class="form-control" name="name" id="name">
+                    <div class="valid-feedback">Success! You've done it.</div>
+                </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="phone">手机号</label>
+                        <input type="text" placeholder="请输入手机号" class="form-control" name="phone" id="phone">
+                        <div class="valid-feedback">Success! You've done it.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label" for="password">密码</label>
+                        <input type="password" placeholder="请输入密码" class="form-control" name="password" id="password">
+                        <div class="valid-feedback">Success! You've done it.</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="confirm">密码确认</label>
+                        <input type="password" placeholder="输入同样密码" class="form-control" name="confirm" id="confirm">
+                        <div class="valid-feedback">Success! You've done it.</div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="btn btn-register">注册</button>
+                    </div>
+                    <div class="mt-3">
+                        <a class="text-color-secondary" href="/login">已有账号？去登陆</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<% include shared/footer.ejs %>
+</html>
