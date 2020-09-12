@@ -1,5 +1,47 @@
-const audio=document.getElementById('audio')
-const progressContainer=document.getElementById('progress-container')
+
+$('.class-tab').click((e) => {
+    e.preventDefault();
+    $('.class-tab').addClass('grade-tab-active')
+    $('.class-content').show()
+
+    $('.word-tab').removeClass('grade-tab-active')
+    $('.word-content').hide()
+})
+$('.word-tab').click((e) => {
+    e.preventDefault();
+    $('.class-tab').removeClass('grade-tab-active')
+    $('.class-content').hide()
+    $('.word-tab').addClass('grade-tab-active')
+    $('.word-content').show()
+})
+$('.profile-all-tab').click((e) => {
+    e.preventDefault();
+    $('.profile-all').show()
+    $('.profile-all-tab div').addClass('profile-subtab-active')
+    $('.profile-password-tab div').removeClass('profile-subtab-active')
+    $('.profile-payment-tab div').removeClass('profile-subtab-active')
+    $('.profile-password').hide()
+    $('.profile-payment').hide()
+})
+
+$('.profile-password-tab').click((e) => {
+    e.preventDefault();
+    $('.profile-password').show()
+    $('.profile-password-tab div').addClass('profile-subtab-active')
+    $('.profile-all-tab div').removeClass('profile-subtab-active')
+    $('.profile-payment-tab div').removeClass('profile-subtab-active')
+    $('.profile-all').hide()
+    $('.profile-payment').hide()
+})
+$('.profile-payment-tab').click((e) => {
+    e.preventDefault();
+    $('.profile-payment').show()
+    $('.profile-payment-tab div').addClass('profile-subtab-active')
+    $('.profile-all-tab div').removeClass('profile-subtab-active')
+    $('.profile-password-tab div').removeClass('profile-subtab-active')
+    $('.profile-all').hide()
+    $('.profile-password').hide()
+})
 $('.user-settings').click((e) => {
     e.preventDefault();
     // Show expamded navigation
@@ -7,66 +49,56 @@ $('.user-settings').click((e) => {
     $('.user-settings-expanded').toggleClass('user-settings-expanded-active');
 
 })
-
-$('.record-btn').click((e) => {
-    console.log('show links')
-    $('.record-content').toggle()
-    $('.record-btn-wrap').toggleClass('record-btn-pt');
-})
-
-function readableDuration(time) {
-    sec = Math.floor(time);
-
-    min = Math.floor( sec / 60 );
-    min = min >= 10 ? min : '0' + min;
-    sec = Math.floor( sec % 60 );
-    sec = sec >= 10 ? sec : '0' + sec;
-    return min + ':' + sec;
-}
-function playSong(){
-    $('.player-container').addClass('play')
-    $('.action-btn-big i.fas').removeClass('fa-play')
-    $('.action-btn-big i.fas').addClass('fa-pause')
-    $('.player-container-wrap').css('margin-top','3rem')
-    const time=readableDuration(audio.duration)
-    $('#player-duration').text(`00:00/${time}`)
-    audio.play();
-}
-function pauseSong(){
-    $('.player-container').removeClass('play')
-    $('.action-btn-big i.fas').addClass('fa-play')
-    $('.action-btn-big i.fas').removeClass('fa-pause')
-    $('.player-container-wrap').css('margin-top','1rem')
-
-    audio.pause();
-}
-
-function updateProgress(){
-    const progressPercent=(audio.currentTime/audio.duration)*100;
-    const ctime=readableDuration(audio.currentTime)
-    const atime=readableDuration(audio.duration)
-    $('#player-duration').text(`${ctime}/${atime}`)
-    $('.player-progress').css('width',`${progressPercent}%`)
-}
-
-//set progress bar
-function setProgress(e){
-    const width=this.clientWidth;
-    const clickX= e.offsetX;
-    const duration=audio.duration;
-    audio.currentTime=(clickX/width)*duration;
-}
-$('#play').click(() => {
-    const isPlaying=$('.player-container').hasClass('play')
-    if(isPlaying){
-        pauseSong()
+$('.login-form').submit((e)=>{
+    let phone=$('#phone').val();
+    let password=$('#password').val();
+    if(!phone ){
+        e.preventDefault();
+        $('#phone').addClass(' is-invalid')
     }else{
-        playSong()
+        $('#phone').removeClass(' is-invalid')
+    }
+    if(!password){
+        e.preventDefault();
+        $('#password').addClass(' is-invalid')
+    }else{
+        $('#password').removeClass(' is-invalid')
     }
 })
 
+$('.register-form').submit((e)=>{
+    let phone=$('#phone').val();
+    let password=$('#password').val();
+    if(!phone ){
+        e.preventDefault();
+        $('#phone').addClass(' is-invalid')
+    }
+    if(!password){
+        e.preventDefault();
+        $('#password').addClass(' is-invalid')
+    }else{
+        $('#password').removeClass(' is-invalid')
+    }
+})
+$('#phone').keyup(()=>{
+    $('#phone').removeClass(' is-invalid')
+})
 
-audio.addEventListener('timeupdate',updateProgress);
-progressContainer.addEventListener('click',setProgress)
+const max_chars = 11;
+$('#phone').keydown( function(e){
+    if ($(this).val().length >= max_chars) {
+        $(this).val($(this).val().substr(0, max_chars));
+    }
+});
 
-
+$('#phone').keyup( function(e){
+    if ($(this).val().length >= max_chars) {
+        $(this).val($(this).val().substr(0, max_chars));
+    }
+});
+$("#phone").on("keypress keyup blur",function (event) {
+    $(this).val($(this).val().replace(/[^\d].+/, ""));
+    if ((event.which < 48 || event.which > 57)) {
+        event.preventDefault();
+    }
+});

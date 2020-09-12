@@ -7,11 +7,36 @@
   color: grey;
 }
 body{
+  min-height: 100vh;
   box-sizing: border-box;
 font-family:Helvetica,sans-serif;
   background: #F9F9F9;
 padding-bottom: 220px;
   position: relative;
+}
+.bg-green{
+  background: #309e30;
+}
+.bg-red{
+  background: red;
+}
+.bg-yellow{
+  background: #ffc107;
+}
+.text-red{
+  color: red!important;
+}
+.text-green{
+  color:lightgreen!important;
+}
+.zy-mt-1{
+  margin-top: 1px;
+}
+.zy-mt-2{
+  margin-top: 2px;
+}
+.margin-all-0{
+  margin: 0!important;
 }
 a:hover,
 a:visited,
@@ -151,6 +176,26 @@ a:hover{
   -o-background-size: cover;
   background-size: cover;
 }
+.home-menu-item{
+  margin: 0px 16px;
+
+  padding: 8px 12px;
+
+  border-radius: 5px;
+}
+.home-menu-item-active{
+  margin: 0px 16px;
+
+  padding: 8px 12px;
+
+  border-radius: 5px;
+  background: var(--primary--color);
+  color: white;
+}
+.home-menu-item:hover{
+  background: rgba(255,95,64,0.52);
+  color: white;
+}
 .banner-layer{
   position: absolute;
   width: inherit;
@@ -175,15 +220,17 @@ a:hover{
   padding: .8rem 1.7rem;
   color: white;
 }
-.record-btn{
+.record-btn,.sub-btn{
   margin-top: 5%;
   padding: .8rem 1.7rem;
   color: white;
   background: var(--secondary-color);
-  box-shadow: 0px 2px 12px var(--secondary-color);
+
   border-radius: 25px;
 }
-.record-btn:hover{
+
+.record-btn:hover,.sub-btn:hover{
+  box-shadow: 0px 2px 12px var(--secondary-color);
   color: white!important;
 }
 .enroll-btn:hover{
@@ -226,7 +273,7 @@ a:hover{
 }
 .course-cover{
   width: 100%;
-  height: 180px;
+  height: auto;
 }
 .card-body{
   text-align: center;
@@ -279,7 +326,7 @@ a:hover{
 .register-img{
   width: 100%;
   height: auto;
-  padding: 2% 5%;
+  padding: 2% 0%;
 }
 .register-content{
   padding-bottom: 4.5%;
@@ -312,7 +359,7 @@ a:hover{
 
 .course-details-img{
   width: 100%;
-  height: 280px;
+  height: auto;
 }
 .course-details-title{
   background: var(--primary--color);
@@ -374,15 +421,15 @@ a:hover{
   color:#c1c1c1;
 }
 
-.chapter-nav ul li:hover a::after{
-  position: absolute;
-  content:'';
-  bottom: -32px;
-  left: 0;
-  width: 100%;
-  height: 4.5px;
-  background: var(--primary--color);
-}
+/*.chapter-nav ul li:hover a::after{*/
+/*  position: absolute;*/
+/*  content:'';*/
+/*  bottom: -32px;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 4.5px;*/
+/*  background: var(--primary--color);*/
+/*}*/
 .chapter-nav-item-ative{
   color: var(--primary--color)!important;
 }
@@ -395,9 +442,16 @@ a:hover{
   height: 4.5px;
   background: var(--primary--color);
 }
+
+.video-content-title h3{
+  padding-top: 5px;
+}
 .video-content-title{
   width: 100%;
   text-align: center;
+  background: #f3f3f3;
+  padding: 12px 10px;
+  border-radius: 20px 20px 0px 0px;
 }
 .video-lc{
   margin-top: 2rem;
@@ -405,14 +459,8 @@ a:hover{
 .video-card{
   background: white;
   border-radius: 20px;
-  /*overflow: hidden;*/
+}
 
-}
-.video-content-title{
-  background: #f3f3f3;
-  padding: 12px 10px;
-  border-radius: 20px 20px 0px 0px;
-}
 .player-container-wrap{
   display: grid;
   place-items: center;
@@ -654,4 +702,307 @@ a:hover{
   background-color: #f5f5f5;
   padding: 15px 20px 15px 20px;
   border-radius: 10px;
+}
+.qa-answer{
+  display: inline-flex;
+}
+.qa-selection{
+  margin-top: 2px;
+}
+.custom-control-input:checked~.custom-control-label::before {
+  color: #fff;
+  border-color: var(--primary--color)!important;
+  background-color:  var(--primary--color)!important;
+}
+
+.submit-wrap{
+  border-top: 1px solid #d2d2d2;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.word-card{
+  display: inline-flex;
+  border-bottom: 1px solid #d2d2d2;
+}
+.word-card p{
+  padding-left: 20px;
+}
+.word-card-wrap{
+  background: white;
+  padding: 20px 15px 1px 15px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+.word-row{
+  margin-top: 60px;
+}
+.grade-tab-wrap{
+  display: grid;
+  margin-top: 50px;
+}
+.grade-tab{
+  position: relative;
+  max-width: 120px;
+  padding: 16px 10px;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  color: var(--primary)!important;
+}
+.grade-tab-active:hover{
+
+  color: white!important;
+}
+.grade-tab-active{
+  background:var(--primary--color)!important;
+  color: white!important;
+}
+.grade-tab-active::before{
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: var(--primary--color);
+  top: 16.6px;
+  right: -7px;
+  z-index: -1;
+  border-radius: 2.5px;
+ transform: rotate(45deg);
+}
+.grade-card{
+  background: white;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+.grade-circle-wrap{
+  text-align: center;
+  padding: 50px 0px;
+}
+.grade-circle{
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 50%;
+  color: white;
+}
+.grade-title{
+  margin-top: 13px;
+  font-weight: bold;
+}
+.left-menu{
+  padding-right: 0;
+  padding-left: 60px;
+  padding-top: 12px;
+}
+.grade-answer-row{
+  display: inline-flex;
+  width: 100%;
+  position: relative;
+  padding: 20px 0px 5px 20px;
+  background: #efefef;
+  border-radius: 10px;
+
+}
+.grade-answer-right-item{
+  position: absolute;
+  right: 16px;
+  top: 32px;
+  color: var(--secondary-color);
+  font-size: 2rem;
+}
+.grade-check-wrap{
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 60px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border-left: 1px solid #b1b1b1;
+}
+.grade-question-wrap{
+  padding-top:13px;
+  margin-top: 12px;
+}
+.grade-question-circle{
+  padding: 12px;
+  background: white;
+  border-radius: 50%;
+  font-size: 1.2rem;
+
+}
+
+.grade-wrap{
+  margin: 0px 15px;
+}
+
+/*********************/
+.profile-icon-span{
+  font-size: 2.2rem;
+  /*border-radius: 50%;*/
+  /*border: 2px solid white;*/
+  position: relative;
+}
+.csicon::before{
+  position: absolute;
+  background: #f9f9f9;
+  top: -60px;
+  border-radius: 50%;
+  padding:2.5rem;
+  left: -60px;
+  border: 5px solid white;
+}
+.profile-icon-content{
+  position: relative;
+  height: 100px;
+}
+.profile-subtab{
+  display: inline-flex;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-radius: 5px;
+  color: grey;
+}
+.profile-subtab:hover{
+  color: var(--primary--color);
+}
+.profile-subtab-active{
+  background: var(--primary--color);
+  color: white;
+}
+.profile-subtab-active:hover{
+  color: white!important;
+}
+
+.word-exam-title{
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 600;
+}
+.word-exam-title h2{
+  position: relative;
+}
+.word-exam-title h2::after {
+  content: " ";
+  position: absolute;
+  width: 4.6%;
+  height: 4px;
+  bottom: -30px;
+  left: 48%;
+  background: var(--primary--color);
+}
+.word-answer-input{
+ display:inline-flex;
+  padding: 26px 12px 12px 12px;
+}
+.word-exam-card{
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: 1px solid white;
+  transition: border .5s ease-in-out;
+
+}
+.word-exam-card:hover{
+  border: 1px solid var(--secondary-color);
+}
+.word-exam-v{
+  padding: 10px;
+  border-bottom: 1px solid #cacaca;
+}
+#word-label{
+  margin-left: 10px;
+}
+.word-card-row{
+  margin-top: 30px;
+}
+.word-exam-result-wrap{
+  display: inline-flex;
+}
+.word-result-icon{
+  padding-right: 12px;
+  font-size: 1.6rem;
+  color:var(--secondary-color);
+}
+
+.word-result-title{
+  width: 100%;
+}
+.word-result-title p{
+  color:grey;
+}
+.word-result-title h5{
+  padding-top: 5px;
+  font-weight: 600;
+}
+.result-row-wrap{
+  padding: 20px;
+  margin-top: 30px;
+}
+.word-result-row{
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+.word-sum-card-row{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.word-sum-card{
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.word-sum-card div h3{
+  border-bottom: 1px solid #fafafa;
+  padding-bottom: 10px;
+}
+.correct-border{
+  border:1px solid lightgreen;
+
+}
+.error-border{
+  border:1px solid red;
+}
+.word-exam-history{
+  padding: 30px;
+}
+.table-title{
+  background: var(--primary--color);
+  color: white;
+}
+.word-content{
+  display: none;
+}
+.correct-rate{
+  padding: 3px 6px;
+  color: white;
+  border-radius: 5px;
+}
+.profile-card{
+  max-width: 600px;
+  margin: 60px auto;
+
+}
+.profile-card-title{
+  width: 100%;
+  text-align: center;
+  background: #f3f3f3;
+  padding: 12px 10px;
+  border-radius: 5px 5px 0px 0px;
+}
+.profile-card-title h3{
+  padding-top: 10px;
+}
+.profile-card-content{
+  background: white;
+  padding: 50px 50px;
+}
+.profile-sub{
+  width: 50%;
+  margin: 10px auto;
+}
+.profile-password{
+  display: none;
+}
+.profile-payment{
+  display: none;
 }

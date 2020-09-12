@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<% include shared/head.ejs %>
+<body>
+<head>
+    <% include shared/nav.ejs %>
+</head>
+<div>
+    <img class="course-details-img" src="../images/profile-banner-second.jpg">
+</div>
+<div class="container">
+
+        <div class="text-center profile-icon-content">
+            <p class="profile-icon"><span class="profile-icon-span"><i class="far fa-user csicon"></i></span></p>
+        </div>
+      <div class="text-center ">
+          <h2><%=user.nickName%></h2>
+      </div>
+
+    <div class="mt-5 text-center">
+            <a href class="profile-all-tab">
+                <div class="profile-subtab profile-subtab-active">
+                    <i class="far fa-user mr-3 zy-mt-2"></i>
+                    <p class="no-margin">个人信息</p>
+                </div>
+            </a>
+            <a href class="profile-password-tab">
+                <div class="profile-subtab">
+                    <i class="fas fa-key mr-3 zy-mt-2"></i>
+                    <p class="no-margin">密码设置</p>
+                </div>
+            </a>
+            <a href class="profile-payment-tab">
+                <div class="profile-subtab">
+                    <i class="fas fa-info mr-3 zy-mt-2"></i>
+                    <p class="no-margin">最新消息</p>
+                </div>
+            </a>
+    </div>
+
+    <div class="profile-card">
+        <div class="profile-card-title text-center" >
+            <h3 class="profile-all">修改个人资料</h3>
+            <h3 class="profile-password">修改密码</h3>
+            <h3 class="profile-payment">消息查看</h3>
+        </div>
+        <div class="profile-card-content profile-all">
+            <form method="post" class="">
+                <div class="form-group">
+                    <label class="form-control-label" for="name">显示名</label>
+                    <input type="text"  value="<%=user.nickName%>" class="form-control" name="nickName" id="nickName">
+                    <div class="valid-feedback">Success! You've done it.</div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="phone">手机号</label>
+                    <input type="text" placeholder="请输入手机号"value="<%=user.username%>" class="form-control" name="username" id="phone" readonly>
+                    <div class="valid-feedback">Success! You've done it.</div>
+                </div>
+                <div class="profile-sub">
+                    <button class="btn btn-register">提交修改</button>
+                </div>
+            </form>
+        </div>
+        <div class="profile-card-content profile-password">
+            <form method="post" class="">
+                <div class="form-group">
+                    <label class="form-control-label" for="password">老密码</label>
+                    <input type="password" placeholder="请输入老密码" class="form-control" name="password" id="password">
+                    <div class="invalid-feedback">请输入老密码。</div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="password">新密码</label>
+                    <input type="password" placeholder="请输入新密码" class="form-control" name="Newpassword" id="password">
+                    <div class="invalid-feedback">请输入新密码。</div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="confirm">新密码确认</label>
+                    <input type="password" placeholder="再次输入密码" class="form-control" name="confirm" id="confirm">
+                    <div class="invalid-feedback">再次输入新密码</div>
+                </div>
+                <div class="profile-sub">
+                    <button class="btn btn-register">重置密码</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class=" profile-payment">
+            <ul class="list-group">
+                <a href>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                        个人课程信息
+                        <span class="text-color-primary"><i class="fas fa-circle"></i></span>
+                </li>
+                </a>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+<% include shared/footer.ejs %>
+</html>

@@ -5,6 +5,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor03">
+            <%if(user){%>
             <ul class="navbar-nav  ml-auto">
                 <li class="nav-item active">
                     <i class="fas fa-bell text-color-primary top-menu-item"></i>
@@ -15,11 +16,25 @@
                     </a>
                 </li>
             </ul>
+            <%}else {%>
+                    <ul class="navbar-nav  ml-auto">
+                        <li class="nav-item active">
+                            <a  href="/register ">
+                                <p class="home-menu-item">用户注册</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/login ">
+                               <p class="home-menu-item-active">登陆账号</p>
+                            </a>
+                        </li>
+                    </ul>
+            <%}%>
         </div>
     </div>
 </nav>
 <nav class='user-settings-expanded'>
-    <!-- usser settings nav -->
+    <!-- user settings nav -->
     <ul>
         <li>
             <a href='/profile'>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<% include ../shared/head.ejs %>
+<body>
+<head>
+    <% include ../shared/nav.ejs %>
+</head>
+<div>
+    <nav class="chapter-nav">
+        <div class="container">
+            <ul>
+                <li class="chapter-nav-item">
+                    <a href="/courses/chapter/:_id" ><i class="fas fa-file-video pr-2"></i>课程视屏</a>
+                </li>
+                <li>
+                    <a  class="chapter-nav-item-ative" href="/courses/chapter/:_id/words"><i class="fas fa-file-word pr-2"></i>背诵单词</a>
+
+                </li>
+                <li>
+                    <a href="/courses/chapter/:_id/grade"><i class="fas fa-user-graduate pr-2"></i>成绩总结</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div>
+            <div class="row word-row">
+                <div class="col-6 ">
+                    <div class="word-card-wrap">
+                        <div class="word-card">
+                            <h5>Travel</h5>
+                            <p>v. 长途旅行；经受得住旅行；（物体，放射线）移动；行进，传送；经得住长途运输
+                                n. 旅行</p>
+                        </div>
+                        <div class="container" style="padding-left: 60px;padding-top: 15px">
+                            <p>例句：You had better travel to Nova Scotia tomorrow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 ">
+                    <div class="word-card-wrap">
+                        <div class="word-card">
+                            <h5>Travel</h5>
+                            <p>v. 长途旅行；经受得住旅行；（物体，放射线）移动；行进，传送；经得住长途运输
+                                n. 旅行</p>
+                        </div>
+                        <div class="container" style="padding-left: 60px;padding-top: 15px">
+                            <p>例句：You had better travel to Nova Scotia tomorrow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 ">
+                    <div class="word-card-wrap">
+                        <div class="word-card">
+                            <h5>Travel</h5>
+                            <p>v. 长途旅行；经受得住旅行；（物体，放射线）移动；行进，传送；经得住长途运输
+                                n. 旅行</p>
+                        </div>
+                        <div class="container" style="padding-left: 60px;padding-top: 15px">
+                            <p>例句：You had better travel to Nova Scotia tomorrow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 ">
+                    <div class="word-card-wrap">
+                        <div class="word-card">
+                            <h5>Travel</h5>
+                            <p>v. 长途旅行；经受得住旅行；（物体，放射线）移动；行进，传送；经得住长途运输
+                                n. 旅行</p>
+                        </div>
+                        <div class="container" style="padding-left: 60px;padding-top: 15px">
+                            <p>例句：You had better travel to Nova Scotia tomorrow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="record-btn-wrap " style="padding: 0">
+                <a href="/courses/chapter/:_id/wordExam" class="btn sub-btn">开始单词测试</a>
+            </div>
+        </div>
+    </div>
+
+<div>
+        <% include ../shared/footer.ejs %>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<% include ../shared/head.ejs %>
+<body>
+<head>
+    <% include ../shared/nav.ejs %>
+</head>
+<div>
+    <nav class="chapter-nav">
+        <div class="container">
+            <ul>
+                <li class="chapter-nav-item">
+                    <a href="/courses/chapter/:_id" ><i class="fas fa-file-video pr-2"></i>课程视屏</a>
+                </li>
+                <li>
+                    <a  class="chapter-nav-item-ative" href="/courses/chapter/:_id/words"><i class="fas fa-file-word pr-2"></i>背诵单词</a>
+
+                </li>
+                <li>
+                    <a href="/courses/chapter/:_id/grade"><i class="fas fa-user-graduate pr-2"></i>成绩总结</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="word-exam-title">
+            <h2>课后词汇测验</h2>
+        </div>
+       <form method="post">
+        <div class="row word-card-row">
+            <div class="col-sm-6 col-md-4  mt-5">
+                <div class="word-exam-card">
+                    <div class="text-center word-exam-v">
+                        <h5>Travel</h5>
+                    </div>
+                    <div class="word-answer-input">
+                        <label for="word-label" style="padding-top: 8px;width: 50%;text-align: center">回答:</label>
+                        <input  class="form-control" id="word-label" required>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-4  mt-5">
+                <div class="word-exam-card">
+                    <div class="text-center word-exam-v">
+                        <h5>Travel</h5>
+                    </div>
+                    <div class="word-answer-input">
+                        <label for="word-label" style="padding-top: 8px;width: 50%;text-align: center">回答:</label>
+                        <input  class="form-control" id="word-label" >
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-4  mt-5">
+                <div class="word-exam-card">
+                    <div class="text-center word-exam-v">
+                        <h5>Travel</h5>
+                    </div>
+                    <div class="word-answer-input">
+                        <label for="word-label" style="padding-top: 8px;width: 50%;text-align: center">回答:</label>
+                        <input  class="form-control" id="word-label" >
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-4 mt-5">
+                <div class="word-exam-card">
+                    <div class="text-center word-exam-v">
+                        <h5>Travel</h5>
+                    </div>
+                    <div class="word-answer-input">
+                        <label for="word-label" style="padding-top: 8px;width: 50%;text-align: center">回答:</label>
+                        <input  class="form-control" id="word-label" >
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-6 col-md-4 mt-5">
+                <div class="word-exam-card">
+                    <div class="text-center word-exam-v">
+                        <h5>Travel</h5>
+                    </div>
+                    <div class="word-answer-input">
+                        <label for="word-label" style="padding-top: 8px;width: 50%;text-align: center">回答:</label>
+                        <input  class="form-control" id="word-label" >
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="record-btn-wrap " style="padding: 0">
+            <button class="btn sub-btn">提交测试</button>
+        </div>
+       </form>
+
+    </div>
+    <div>
+    <% include ../shared/footer.ejs %>
+</html>

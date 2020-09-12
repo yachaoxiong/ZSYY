@@ -10,14 +10,14 @@
         <div class="container">
             <ul>
                 <li class="chapter-nav-item">
-                    <a href="#!" class="chapter-nav-item-ative"><i class="fas fa-file-video pr-2"></i>课程视屏</a>
+                    <a href="/courses/chapter/:_id" class="chapter-nav-item-ative"><i class="fas fa-file-video pr-2"></i>课程视屏</a>
                 </li>
                 <li>
                     <a href="/courses/chapter/:_id/words"><i class="fas fa-file-word pr-2"></i>背诵单词</a>
 
                 </li>
                 <li>
-                    <a href="/courses/chapter/:_id/grad"><i class="fas fa-user-graduate pr-2"></i>成绩总结</a>
+                    <a href="/courses/chapter/:_id/grade"><i class="fas fa-user-graduate pr-2"></i>成绩总结</a>
                 </li>
             </ul>
         </div>
@@ -40,7 +40,6 @@
                                         <div class="player-progress" id="player-progress"></div>
                                     </div>
                                 </div>
-
                                 <audio preload="metadata" id="audio"src="http://aod.cos.tx.xmcdn.com/group77/M0B/10/F0/wKgO315ZR6PQWPUEADag8UUJrkY618.mp3">
                                 </audio>
                                 <div class="image-container">
@@ -69,42 +68,45 @@
                             </div>
                         </div>
                     </div>
-
+                    <form method="post">
                     <div class="video-card shadow-sm mt-5">
                         <div class="video-content-title text-center" >
                             <h3>课后练习</h3>
                         </div>
                         <div class="container pb-5">
+                            <%for(let i=0;i<questions.length;i++){%>
                             <div class="question-title ">
-                                <h5> if your are planning a longer trip,what can you do?</h5>
+                                <h5> <%=questions[i].question%></h5>
                             </div>
                             <div class="question-answer">
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <p class="no-margin">Ask a friend to drop you off</p>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="<%=i%>a1" name="<%=questions[i].question%>" class="custom-control-input" value="<%=questions[i].a1%>">
+                                    <label class="custom-control-label" for="<%=i%>a1"><%=questions[i].a1%></label>
+                                </div>
                             </div>
                             <div class="question-answer">
-                                <p class="no-margin">Ask a friend to drop you off</p>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="<%=i%>a2" name="<%=questions[i].question%>" class="custom-control-input" value="<%=questions[i].a2%>">
+                                    <label class="custom-control-label" for="<%=i%>a2"><%=questions[i].a2%></label>
+                                </div>
                             </div>
                             <div class="question-answer">
-                                <p class="no-margin">Ask a friend to drop you off</p>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="<%=i%>a3" name="<%=questions[i].question%>" class="custom-control-input" value="<%=questions[i].a3%>">
+                                    <label class="custom-control-label" for="<%=i%>a3"><%=questions[i].a3%></label>
+                                </div>
                             </div>
+                           <%}%>
 
 
-                            <div class="question-title ">
-                                <h5> if your are planning a longer trip,what can you do?</h5>
-                            </div>
-                            <div class="question-answer">
-                                <p class="no-margin">Ask a friend to drop you off</p>
-                            </div>
-                            <div class="question-answer">
-                                <p class="no-margin">Ask a friend to drop you off</p>
-                            </div>
-                            <div class="question-answer">
-                                <p class="no-margin">Ask a friend to drop you off</p>
+                        </div>
+                        <div class="submit-wrap">
+                            <div class="record-btn-wrap">
+                                <button class="btn sub-btn">查看成绩</button>
                             </div>
                         </div>
-
                     </div>
+                    </form>
 
 
 
@@ -129,10 +131,6 @@
 
     </section>
 <div>
-
-
-
-
-
 <% include ../shared/footer.ejs %>
+<script src='/javascripts/audio.js'></script>
 </html>

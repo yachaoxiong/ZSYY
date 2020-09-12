@@ -7,35 +7,43 @@
     <a class="navbar-brand" href="/"><img class="logo-small" src="/images/logo.png"></a>
     </div>
 </nav>
+
 <div class="container">
+
     <div class="bg-white content-box shadow-lg">
         <div class="form-title-wrap">
             <h1 class="form-title">注册账号</h1>
         </div>
-
+        <%if(Rerr&&Rerr.length>0){%>
+        <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4 class="alert-heading font-weight-bold">错误</h4>
+            <p class="mb-0"><%=Rerr%></p>
+        </div>
+        <%}%>
         <div class="row register-content">
             <div class="col-lg-5 col-md-5 col-sm left-img">
              <img class="register-img" src="/images/register.png">
             </div>
             <div class="col-lg-7 col-md-7 col-sm-12 text-left form-wrap">
-                <form method="post">
-                <div class="form-group">
+                <form method="post" class="register-form">
+                <div class="form-group has-success">
                     <label class="form-control-label" for="name">显示名</label>
-                    <input type="text" placeholder="显示名" class="form-control" name="name" id="name">
+                    <input type="text" placeholder="显示名" class="form-control" name="nickName" id="nickName">
                     <div class="valid-feedback">Success! You've done it.</div>
                 </div>
-                    <div class="form-group">
-                        <label class="form-control-label" for="phone">手机号</label>
-                        <input type="text" placeholder="请输入手机号" class="form-control" name="phone" id="phone">
+                    <div class="form-group has-success">
+                        <label class="form-control-label" for="username">手机号</label>
+                        <input  placeholder="请输入手机号" class="form-control" name="username" id="phone">
                         <div class="valid-feedback">Success! You've done it.</div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group has-success">
                         <label class="form-control-label" for="password">密码</label>
                         <input type="password" placeholder="请输入密码" class="form-control" name="password" id="password">
-                        <div class="valid-feedback">Success! You've done it.</div>
+                        <div class="invalid-feedback password-invalid">Success! You've done it.</div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group has-success">
                         <label class="form-control-label" for="confirm">密码确认</label>
                         <input type="password" placeholder="输入同样密码" class="form-control" name="confirm" id="confirm">
                         <div class="valid-feedback">Success! You've done it.</div>

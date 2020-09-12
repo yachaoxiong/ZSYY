@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<% include ../shared/head.ejs %>
+<body>
+<head>
+    <% include ../shared/nav.ejs %>
+</head>
+<div>
+    <nav class="chapter-nav">
+        <div class="container">
+            <ul>
+                <li class="chapter-nav-item">
+                    <a href="/courses/chapter/:_id" ><i class="fas fa-file-video pr-2"></i>课程视屏</a>
+                </li>
+                <li>
+                    <a   href="/courses/chapter/:_id/words"><i class="fas fa-file-word pr-2"></i>背诵单词</a>
+
+                </li>
+                <li>
+                    <a class="chapter-nav-item-ative" href="/courses/chapter/:_id/grade"><i class="fas fa-user-graduate pr-2"></i>成绩总结</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3 left-menu">
+                <div class="grade-tab-wrap">
+                    <a href class="grade-tab class-tab grade-tab-active "> 课后练习</a>
+                    <a href class="grade-tab word-tab mt-3"> 单词背诵</a>
+                </div>
+            </div>
+<!--   start of question         -->
+            <div class="col-9 class-content" >
+              <div class="grade-card">
+                  <div class="video-content-title text-center " >
+                      <h3 class="grade-title">你的成绩</h3>
+                  </div>
+                  <div >
+                      <div class="grade-circle-wrap">
+                          <h3 ><span class="grade-circle">3/5</span></h3>
+                      </div>
+                  </div>
+
+                    <div class="grade-wrap pb-5">
+
+                      <div class="grade-answer-row mt-3">
+                              <div class="grade-question-wrap"><span class="grade-question-circle">Q1</span></div>
+                              <div class="grade-check-wrap">
+                                  <p>你的回答： Ask a friend to drop you off</p>
+                                  <p>正确答案： Ask a friend to drop you off</p>
+                              </div>
+                              <div class="grade-answer-right-item">
+                                  <i class="fas fa-check"></i>
+                              </div>
+                      </div>
+
+                        <div class="grade-answer-row mt-3">
+                            <div class="grade-question-wrap"><span class="grade-question-circle">Q2</span></div>
+                            <div class="grade-check-wrap">
+                                <p>你的回答： Ask a friend to drop you off</p>
+                                <p>正确答案： Ask a friend to drop you off</p>
+                            </div>
+                            <div class="grade-answer-right-item text-red">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+
+
+                        <div class="grade-answer-row mt-3">
+                            <div class="grade-question-wrap"><span class="grade-question-circle">Q1</span></div>
+                            <div class="grade-check-wrap">
+                                <p>你的回答： Ask a friend to drop you off</p>
+                                <p>正确答案： Ask a friend to drop you off</p>
+                            </div>
+                            <div class="grade-answer-right-item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+
+
+                        <div class="grade-answer-row mt-3">
+                            <div class="grade-question-wrap"><span class="grade-question-circle">Q1</span></div>
+                            <div class="grade-check-wrap">
+                                <p>你的回答： Ask a friend to drop you off</p>
+                                <p>正确答案： Ask a friend to drop you off</p>
+                            </div>
+                            <div class="grade-answer-right-item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+
+
+                        <div class="grade-answer-row mt-3">
+                            <div class="grade-question-wrap"><span class="grade-question-circle">Q1</span></div>
+                            <div class="grade-check-wrap">
+                                <p>你的回答： Ask a friend to drop you off</p>
+                                <p>正确答案： Ask a friend to drop you off</p>
+                            </div>
+                            <div class="grade-answer-right-item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+              </div>
+            </div>
+            <!--   End of question         -->
+            <!--   start of Word       -->
+            <div class="col-9 word-content" >
+                <div class="grade-card">
+                    <div class="video-content-title text-center " >
+                        <h3 class="grade-title">单词测验结果</h3>
+                    </div>
+
+                    <div class="result-row-wrap">
+                        <div class="row margin-all-0 word-result-row">
+
+                            <div class="col-md-6 col-sm-12 word-exam-result-wrap pt-2">
+                                <div class="word-result-title">
+                                    <p class="no-margin">正确率</p>
+                                    <h5>80%</h5>
+                                </div>
+                                <div class="word-result-icon">
+                                <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 word-exam-result-wrap pt-2">
+                                <div class="word-result-title ">
+                                    <p class="no-margin">正确</p>
+                                    <h5>8</h5>
+                                </div>
+                                <div class="word-result-icon text-green">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6   col-sm-12 word-exam-result-wrap pt-4">
+                                <div class="word-result-title">
+                                    <p class="no-margin">错误</p>
+                                    <h5>2</h5>
+                                </div>
+                                <div class="word-result-icon text-red">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6  col-sm-12 word-exam-result-wrap pt-4">
+                                <div class="word-result-title">
+                                    <p class="no-margin">测试时间</p>
+                                    <h5>2020/07/09</h5>
+                                </div>
+                                <div class="word-result-icon text-muted">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row margin-all-0 word-sum-card-row">
+                        <div class="col-md-4 col-sm-12" style="padding: 20px">
+                            <div class="word-sum-card error-border">
+                                <div class="text-center">
+                                    <h3>Travel</h3>
+                                </div>
+                                <p>回答: 旅行</p>
+                                <p>答案：旅行</p>
+                                <div class="word-result-icon text-center text-red">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12" style="padding: 20px">
+                            <div class="word-sum-card correct-border">
+                                <div class="text-center">
+                                    <h3>Travel</h3>
+                                </div>
+                                <p>回答: 旅行</p>
+                                <p>答案：旅行</p>
+                                <div class="word-result-icon text-center">
+                                    <i class="fas fa-check text-green"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                   <div class="word-exam-history">
+                       <div class="text-center mb-4">
+                           <h5 class="font-weight-bold">单词测试历史记录</h5>
+                       </div>
+                       <table class="table table-borderless table-striped table-hover">
+                           <thead class="table-title">
+                           <tr>
+                               <th scope="col">测试时间</th>
+                               <th scope="col">正确</th>
+                               <th scope="col">错误</th>
+                               <th scope="col">正确率</th>
+                           </tr>
+                           </thead>
+                           <tbody>
+                           <tr>
+                               <td>2020/07/20</td>
+                               <td>9</td>
+                               <td>1</td>
+                               <td><span class="correct-rate bg-yellow">90%</span></td>
+                           </tr>
+
+
+                           <tr>
+                               <td>2020/07/20</td>
+                               <td>10</td>
+                               <td>0</td>
+                               <td><span class="correct-rate bg-green">100%</span></td>
+                           </tr>
+
+                           <tr>
+                               <td>2020/07/20</td>
+                               <td>3</td>
+                               <td>7</td>
+                               <td><span class="correct-rate bg-red">30%</span></td>
+                           </tr>
+
+                           </tbody>
+                       </table>
+                   </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+  </div>
+        <% include ../shared/footer.ejs %>
+</html>
